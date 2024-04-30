@@ -1,4 +1,4 @@
-package com.medivale.api.endereco;
+package com.medivale.api.domain.endereco;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;

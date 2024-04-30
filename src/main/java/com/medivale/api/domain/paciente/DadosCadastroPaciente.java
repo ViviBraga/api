@@ -1,6 +1,6 @@
-package com.medivale.api.medico;
+package com.medivale.api.domain.paciente;
 
-import com.medivale.api.endereco.DadosCadastroEndereco;
+import com.medivale.api.domain.endereco.DadosCadastroEndereco;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
@@ -8,28 +8,25 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 
-public record DadosCadastroMedico(
+public record DadosCadastroPaciente(
 
     @NotBlank
-    String nome, 
-    
-    @Email
+    String nome,
+
     @NotBlank
+    @Email
     String email,
 
     @NotBlank
-    String telefone, 
+    String telefone,
 
     @NotBlank
-    @Pattern(regexp = "\\d{4,6}")
-    String crm, 
-    
-    @NotNull
-    Especialidade especialidade, 
+    @Pattern(regexp = "\\d{3}\\.?\\d{3}\\.?\\d{3}\\-?\\d{2}")
+    String cpf,
 
     @NotNull
     @Valid
     DadosCadastroEndereco endereco
-    ) {
+) {
 
 }

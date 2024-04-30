@@ -1,4 +1,4 @@
-package com.medivale.api.medico;
+package com.medivale.api.domain.medico;
 
 public record DadosListagemMedico(
     Long id,

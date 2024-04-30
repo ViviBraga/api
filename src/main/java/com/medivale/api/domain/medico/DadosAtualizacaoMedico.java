@@ -1,6 +1,6 @@
-package com.medivale.api.medico;
+package com.medivale.api.domain.medico;
 
-import com.medivale.api.endereco.DadosCadastroEndereco;
+import com.medivale.api.domain.endereco.DadosCadastroEndereco;
 
 import jakarta.validation.constraints.NotNull;
 

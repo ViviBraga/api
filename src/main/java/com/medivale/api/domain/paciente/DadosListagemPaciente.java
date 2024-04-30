@@ -1,4 +1,4 @@
-package com.medivale.api.paciente;
+package com.medivale.api.domain.paciente;
 
 
 public record DadosListagemPaciente(
