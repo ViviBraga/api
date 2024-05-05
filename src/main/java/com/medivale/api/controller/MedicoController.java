@@ -23,10 +23,12 @@ import com.medivale.api.domain.medico.DadosListagemMedico;
 import com.medivale.api.domain.medico.Medico;
 import com.medivale.api.repository.MedicoRepository;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/medicos")
+@SecurityRequirement(name = "bearer-key")
 public class MedicoController {
 
     @Autowired

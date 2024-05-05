@@ -23,10 +23,12 @@ import com.medivale.api.domain.paciente.DadosListagemPaciente;
 import com.medivale.api.domain.paciente.Paciente;
 import com.medivale.api.repository.PacienteRepository;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("pacientes")
+@SecurityRequirement(name = "bearer-key")
 public class PacienteController {
 
     @Autowired
